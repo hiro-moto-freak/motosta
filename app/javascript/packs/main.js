@@ -6,23 +6,30 @@
 // All it does is render <div>Hello Vue</div> at the bottom of the page.
 
 import Vue from 'vue'
-import Vuetify from "vuetify";
-import "vuetify/dist/vuetify.min.css";
+import Vuetify from "vuetify"
+import "vuetify/dist/vuetify.min.css"
 import App from '../app.vue'
 
-Vue.use(Vuetify);
-const vuetify = new Vuetify();
 
-document.addEventListener(
-  'DOMContentLoaded', () => {
-    const app = new Vue({
-      vuetify,
-      render: h => h(App)
-    }).$mount()
-    document.body.appendChild(app.$el)
+Vue.use(Vuetify)
 
-    console.log(app)
-  })
+new Vue({
+  vuetify: new Vuetify(),
+  el: '#motosta',
+  components: {
+    App
+  }
+})
+// const vuetify = new Vuetify();
+
+// document.addEventListener(
+//   'DOMContentLoaded', () => {
+//     const app = new Vue({
+//       vuetify,
+//       render: h => h(App)
+//     }).$mount()
+//     document.body.appendChild(app.$el)
+//   })
 
 
 // The above code uses Vue without the compiler, which means you cannot

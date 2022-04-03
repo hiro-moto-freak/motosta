@@ -12,6 +12,9 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div id="motosta">
+     <%= yield %>
+    </div>
+    <%= javascript_pack_tag 'main' %>
   </body>
 </html>
