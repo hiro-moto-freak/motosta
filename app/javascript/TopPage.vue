@@ -1,7 +1,9 @@
 <template>
   <v-app>
     <Header />
-    <a href="http://localhost:3000/users/sign_out">ログアウト</a>
+    <v-btn class="my-3 ml-auto mr-3" href="http://localhost:3000/users/sign_out"
+      >ログアウト</v-btn
+    >
     <v-tabs>
       <v-tab>Item One</v-tab>
       <v-tab>Item Two</v-tab>

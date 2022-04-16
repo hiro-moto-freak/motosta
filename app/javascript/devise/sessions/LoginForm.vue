@@ -11,7 +11,7 @@
             type="email"
             label="メールアドレス"
             v-model="email"
-            :rules="emailRules"
+            :rules="required"
           />
           <v-text-field
             v-bind:type="showPassword ? 'text' : 'password'"
@@ -20,7 +20,7 @@
             prepend-icon="mdi-lock"
             label="パスワード"
             v-model="password"
-            :rules="passwordRules"
+            :rules="required"
           />
           <v-card-actions>
             <v-btn
@@ -51,14 +51,7 @@ export default {
 
       showPassword: false,
       isValid: false,
-      emailRules: [
-        (v) => /.+@.+\..+/.test(v) || "正しい形式で入力してください",
-      ],
-      passwordRules: [
-        (v) =>
-          /^(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,16}$/.test(v) ||
-          "半角英数字をそれぞれ１つ以上含む8~16字以下の文字列を設定してください",
-      ],
+      required: [(v) => !!v || "必ず入力してください"],
     };
   },
   methods: {
