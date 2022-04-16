@@ -9,7 +9,8 @@ import Vue from 'vue'
 import Vuetify from "vuetify"
 import "vuetify/dist/vuetify.min.css"
 import App from '../app.vue'
-
+import SignupForm from '../devise/registrations/SignupForm.vue'
+import LoginForm from '../devise/sessions/LoginForm.vue'
 
 Vue.use(Vuetify)
 
@@ -17,9 +18,12 @@ new Vue({
   vuetify: new Vuetify(),
   el: '#motosta',
   components: {
-    App
+    App,
+    SignupForm,
+    LoginForm
   }
 })
+
 // const vuetify = new Vuetify();
 
 // document.addEventListener(
