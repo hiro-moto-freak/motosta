@@ -1,9 +1,7 @@
 <template>
-  <v-app id="app">
+  <v-app>
     <Header />
-    <div>
-      <p>{{ message }}</p>
-    </div>
+    <a href="http://localhost:3000/users/sign_out">ログアウト</a>
     <v-tabs>
       <v-tab>Item One</v-tab>
       <v-tab>Item Two</v-tab>
@@ -18,17 +16,8 @@ export default {
   components: {
     Header,
   },
-  data: function () {
-    return {
-      message: "Hello Vue!",
-    };
-  },
 };
 </script>
 
-<style scoped>
-p {
-  font-size: 2em;
-  text-align: center;
-}
+<style>
 </style>

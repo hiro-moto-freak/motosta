@@ -8,7 +8,7 @@
 import Vue from 'vue'
 import Vuetify from "vuetify"
 import "vuetify/dist/vuetify.min.css"
-import App from '../app.vue'
+import TopPage from '../TopPage.vue'
 import SignupForm from '../devise/registrations/SignupForm.vue'
 import LoginForm from '../devise/sessions/LoginForm.vue'
 
@@ -18,7 +18,7 @@ new Vue({
   vuetify: new Vuetify(),
   el: '#motosta',
   components: {
-    App,
+    TopPage,
     SignupForm,
     LoginForm
   }
